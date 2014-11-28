@@ -8,14 +8,8 @@ worth accessing in the hub, so this Spoke would allow access to that hub when
 you need it.
 
 * By default, root login is disabled for anything other then public-key
-* Set your GitHub username with `ENV GH_USER` in your Spoke Dockerfile to
-    automatically insert your public keys from GitHub into your container
-    using `ssh-import-id` if you want to be able to SSH into your container.
-* **NOTE:** This is "secure" in that use of public keys are always secure,
-    but it is not the wisest strategy to use the same key-pair for multiple
-    venues (server cluster, public website, etc.). More robust key management
-    is a feature for a future date. For now, this suffices for protypting and
-    development on small clusters.
+* Set your GitHub username with `GH_USER` to automatically insert your public
+  keys from GitHub into your container using `ssh-import-id`
 
 ## Tunables
 
